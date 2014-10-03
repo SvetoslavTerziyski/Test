@@ -81,9 +81,9 @@ public class RestAssuredTest {
         when().get("/webservice/users/xml").
         then().
                 statusCode(200).
-                body(hasXPath("//*[self::person and self::person[@id='1'] and self::person/email[text()='peter@rms.com'] and self::person/firstName[text()='Peter'] and self::person/lastName[text()='Coleman']]")).
-                body(hasXPath("//*[self::person and self::person[@id='20'] and self::person/email[text()='dev@rms.com'] and self::person/firstName[text()='Sara'] and self::person/lastName[text()='Stevens']]")).
-                body(hasXPath("//*[self::person and self::person[@id='11'] and self::person/email[text()='devnull@rms.com'] and self::person/firstName[text()='Mark'] and self::person/lastName[text()='Mustache']]"));
+                body(hasXPath("//*[self::user and self::user/email[text()='peter@rms.com'] and self::user/firstName[text()='Peter'] and self::user/lastName[text()='Coleman']]")).
+                body(hasXPath("//*[self::user and self::user/email[text()='steven@rms.com'] and self::user/firstName[text()='Steven'] and self::user/lastName[text()='Shulemen']]")).
+                body(hasXPath("//*[self::user and self::user/email[text()='gordan@rms.com'] and self::user/firstName[text()='Gordan'] and  self::user/lastName[text()='Jameson']]"));
     }
 
     @Test
